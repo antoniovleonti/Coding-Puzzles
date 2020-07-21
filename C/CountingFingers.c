@@ -18,11 +18,11 @@
 #include <stdlib.h>
 #include <math.h>
 
-/*  returns a finger 0-4, with 0 being the thumb, and 4 being the pinky.
-    uses the absolute value of a triangle wave! Cool stuff!! :-)
+/*  Returns a finger 0-4, with 0 being the thumb, and 4 being the pinky.
+    Calculates finger using the absolute value of a triangle wave
 */
 int finger(int x){
-    return (int)(fabs(8/M_PI * asin(sin(M_PI*(x-1) / 8)))+0.5);
+    return (int)(fabs(8/M_PI * asin( sin(M_PI*(x-1) / 8 ))) + 0.5);
 }
 
 int main(){
