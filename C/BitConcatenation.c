@@ -17,15 +17,16 @@ int bitcat(int a, int b){
 // concatenate bits of every number up to & including a
 int solve(int a){
     int ret;
+
     //starting at 0, concatenate each int to the end of ret up to a
     for(int i = ret = 0; i <= a; i++) ret = bitcat(ret, i);
     // this is actually the result modulo INT_MAX
-    return ret;
+    return ret ;
 }
 
 int main(){
     // test numbers 0 - 10
-    for(int i = 0; i < 10; i++){
+    for(int i = 0; i < 15; i++){
         printf("%d -> %d\n", i, solve(i));
     }
     getch(); return 0;
