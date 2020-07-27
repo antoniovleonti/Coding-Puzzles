@@ -11,8 +11,10 @@
 int* hiddenSquares(int x){
     int count = 0;
     int digits = 0;
+
     for(int i = x; i > 0; i /= 10) digits++; // count digits in x
     int tmp[digits*(digits+1)/2]; // set up temp array for values
+    // digits*(digits+1)/2 is the max number of hidden squares there could be!
 
     for(int i = digits; i > 0; i--){
         x %= (int)(pow(10, i)+0.5); // remove leftmost digits of x
